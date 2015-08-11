@@ -1,4 +1,4 @@
-PageantBridge is a proxy wrapper (as standard strfor pageant/putty messaging protocol (using memorymap & winapi SendMessage/Postmessage)
+PageantBridge is a proxy wrapper (on standard streams stdin/stdout) for pageant/putty messaging protocol (based on memorymap & winapi SendMessage/Postmessage)
 
 # Motivation
 I wanted to create an alternative to ssh-agent / pageant (see nwagent).
@@ -16,3 +16,6 @@ Once processed, provide a response to pageantbridge.exe stdin.
 * David Lechner SshAgentLib (pageant security layer) [https://github.com/dlech/SshAgentLib]
 
 
+# License
+
+MIT
