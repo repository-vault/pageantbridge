@@ -23,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/131/pageantbridge/issues"
   },
-  "homepage": "https://github.com/131/pageantbridge"
+  "homepage": "https://github.com/131/pageantbridge",
+  "dependencies": {
+    "duplexer": "^0.1.1",
+    "ssh-agent-js": "^0.2.0"
+  },
+  "devDependencies": {}
 }
