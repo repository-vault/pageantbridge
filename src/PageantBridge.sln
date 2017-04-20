@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageantBridge", "PageantBridge\PageantBridge.csproj", "{D55C1B05-9A28-442D-955C-C253D71E53F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageantBridge", "PageantBridge.csproj", "{D55C1B05-9A28-442D-955C-C253D71E53F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

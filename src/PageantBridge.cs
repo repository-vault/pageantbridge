@@ -240,8 +240,8 @@ namespace PageantBridge
         public void registerClassName(string class_name)
         {
 
-            if (class_name == null) throw new System.Exception("class_name is null");
-            if (class_name == String.Empty) throw new System.Exception("class_name is empty");
+            if (String.IsNullOrEmpty(class_name))
+                throw new Exception("Invalid class_name");
 
             WndProc m_wnd_proc_delegate = CustomWndProc;
 
@@ -255,9 +255,7 @@ namespace PageantBridge
             int last_error = System.Runtime.InteropServices.Marshal.GetLastWin32Error();
 
             if (class_atom == 0 && last_error != ERROR_CLASS_ALREADY_EXISTS)
-            {
-                throw new System.Exception("Could not register window class");
-            }
+                throw new Exception("Could not register window class");
         }
 
 
@@ -267,17 +265,15 @@ namespace PageantBridge
         Stream stdout;
         public PageantBridge(string class_name, string window_name)
         {
-            if (CheckPageantRunning())
-                throw new Exception("Already running");
 
             if(!IsInputRedirected)
                 throw new Exception("Stdin is not bound to anything");
 
+            if (CheckPageantRunning())
+                throw new PublicException(Errors.ALREADY_RUNNING);
+
             stdin = Console.OpenStandardInput();
             stdout = Console.OpenStandardOutput();
-            if (!stdin.CanRead)
-                throw new Exception("No stdin available");
-
 
             registerClassName(class_name);
 
