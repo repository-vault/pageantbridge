@@ -1,6 +1,6 @@
 {
   "name": "pageantbridge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "pageant brige for nodejs",
   "main": "pageant.js",
   "scripts": {
