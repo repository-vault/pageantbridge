@@ -3,7 +3,6 @@
 const path      = require('path');
 const cp        = require('child_process');
 const duplex    = require('duplexer');
-const Server    = require('ssh-agent-js')
 
 const binpath   = path.join(__dirname, 'pageantbridge.exe');
 
