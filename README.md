@@ -7,6 +7,8 @@ I wanted to create an alternative to ssh-agent / pageant (see nwagent).
 Spawn pageantbridge.exe (make sure that its stdin is redirected)
 This creates a window (not shown) using Windows API registered as Pageant class.
 
+See ssh-agent-js/agentd for usage sample
+
 Incoming request are forwarded to pageantbridge.exe stdout.
 Once processed, provide a response to pageantbridge.exe stdin.
 
