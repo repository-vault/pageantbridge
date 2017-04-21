@@ -3,7 +3,8 @@
 const path      = require('path');
 const cp        = require('child_process');
 const duplex    = require('duplexer');
-const Server    = require('ssh-agent-js/server')
+const Server    = require('ssh-agent-js')
+const KeyChain  = require('ssh-keychain')
 
 
 const binpath   = path.join(__dirname, 'pageantbridge.exe');
@@ -11,7 +12,8 @@ const binpath   = path.join(__dirname, 'pageantbridge.exe');
 class PageantTransport {
 
   constructor() {
-    this.server = new Server();
+    this.keychain = new KeyChain();
+    this.server = new Server(this.keychain);
   }
 
   start () {

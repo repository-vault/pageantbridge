@@ -26,7 +26,8 @@
   "homepage": "https://github.com/131/pageantbridge",
   "dependencies": {
     "duplexer": "^0.1.1",
-    "ssh-agent-js": "^0.2.0"
+    "ssh-agent-js": "^1.3.2",
+    "ssh-keychain": "^1.0.2"
   },
   "devDependencies": {}
 }
